@@ -3,14 +3,41 @@ body {
   text-align: center;
   background-color: #f4f4f4;
 }
+
 .boton-jugada {
-  background-color: #3498db;
+  background-color: #aefce8;
   color: #fff;
   padding: 10px 20px;
   font-size: 16px;
   cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+  transition: background-color, transform 0.5s linear;
+  font-size:0;
 }
-#resultados {
-  font-size: 20px;
-  margin: 20px 0;
+
+.boton-jugada:before{
+  font-size:18px;
+}
+
+.boton-jugada:hover {
+  background-color: #116d61;
+  transform: scale(1.2);
+}
+
+.boton-jugada[data-jugada="piedra"]:before {
+  content: "\270A";
+}
+
+.boton-jugada[data-jugada="papel"]:before {
+  content: "\1F4C4";
+}
+
+.boton-jugada[data-jugada="tijera"]:before {
+  content: "\2702";
+}
+
+#imagen {
+  width: 70%;
 }
